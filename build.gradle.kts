@@ -4,6 +4,9 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 plugins {
     application
     kotlin("jvm") version "1.3.72"
+    id("com.diffplug.gradle.spotless") version "3.23.1"
+    id("org.jmailen.kotlinter") version "1.26.0"
+    checkstyle
 }
 
 version = "1.0.2"
@@ -16,6 +19,23 @@ application {
 repositories {
     mavenCentral()
     jcenter()
+}
+
+tasks.checkstyleMain { group = "verification" }
+tasks.checkstyleTest { group = "verification" }
+
+spotless {
+    kotlin {
+        ktlint()
+    }
+    kotlinGradle {
+        target(fileTree(projectDir).apply {
+            include("*.gradle.kts")
+        } + fileTree("src").apply {
+            include("**/*.gradle.kts")
+        })
+        ktlint()
+    }
 }
 
 tasks.withType<Test> {

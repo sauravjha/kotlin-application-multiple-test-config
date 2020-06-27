@@ -4,8 +4,6 @@ import com.squareup.okhttp.OkHttpClient
 import com.squareup.okhttp.Request
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
-import spark.Spark
-import java.net.http.HttpClient
 
 /*
 This is not a actual integration test but just to show how can you
@@ -23,7 +21,7 @@ class MainTest : StringSpec({
             .build()
     val response = client.newCall(request).execute()
     "makes the request successfully" {
-         response.isSuccessful shouldBe true
+        response.isSuccessful shouldBe true
     }
 
 //    afterSpec {

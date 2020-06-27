@@ -64,6 +64,20 @@ tasks:
       container: build-env
       command: ./gradlew journeyTest
 
+  formatKotlin:
+    description: Run the journey tests.
+    group: Test tasks
+    run:
+      container: build-env
+      command: ./gradlew formatKotlin
+
+  lintKotlin:
+    description: Run the journey tests.
+    group: Test tasks
+    run:
+      container: build-env
+      command: ./gradlew lintKotlin
+
   shell:
     description: Start a shell in the development environment.
     group: Utility tasks
