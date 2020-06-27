@@ -1,6 +1,8 @@
 # kotlin-application-multiple-test-config
-This is a code is to illustrate the kotlin code that uses spark and uses Gradle to build the code
-
+This is a code is to illustrate the kotlin code configured to have multiple test folder and gradle task to run each task.
+1. Test framework used it io.kotest.
+2. Three test folder; test, integTest, journeyTest.
+3. Gradle configured using Kotlin DSL.
 ## How to get it running.
 
 ### Prerequisite 
