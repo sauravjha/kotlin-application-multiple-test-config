@@ -3,6 +3,7 @@ This is a code is to illustrate the kotlin code configured to have multiple test
 1. Test framework used it io.kotest.
 2. Three test folder; test, integTest, journeyTest.
 3. Gradle configured using Kotlin DSL.
+4. formatKotlin, lintKotlin, spotlessApply, spotlessCheck task is added to gradle task.
 ## How to get it running.
 
 ### Prerequisite 
