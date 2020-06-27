@@ -37,19 +37,19 @@ http://localhost:4567/hello
 
 ### How to run unit Test using gradle
 
-````
+```
 ./gradlew test       
 ```
 
 ### How to run integration Test using gradle
 
-````
+```
 ./gradlew integTest       
 ```
 
 ### How to run journey Test using gradle
 
-````
+```
 ./gradlew journeyTest       
 ```
 
